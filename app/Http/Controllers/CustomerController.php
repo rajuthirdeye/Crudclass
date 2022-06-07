@@ -15,6 +15,9 @@ class CustomerController extends Controller
     public function index()
     {
         //
+        $customers = Customer::all();
+        return view('customer.index')->with('customers', $customers);;
+
     }
 
     /**
@@ -25,6 +28,8 @@ class CustomerController extends Controller
     public function create()
     {
         //
+            return  view('customer.create');
+
     }
 
     /**
